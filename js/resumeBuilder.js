@@ -29,7 +29,7 @@ bio = {
 
             var formattedContact = HTMLcontactGeneric.replace('%contact%', contact);
             formattedContact = formattedContact.replace('%data%', bio.contacts[contact]);
-            $('#topContacts').append(formattedContact);
+            $('#topContacts, #footerContacts').append(formattedContact);
 
         }
 
@@ -112,17 +112,17 @@ projects = {
         'title': 'AK Goods',
         'dates': 'March 2016',
         'description': 'e-commerce site, custom theme on Genesis Framework',
-        'image': 'images/akgoods.jpg'
+        'image': ['images/akgoods.jpg']
     }, {
         'title': 'ECCK',
         'dates': 'Sept. 2015 to Jan. 2016',
         'description': 'e-commerce site, CRM, custom website, custom theme on Genesis Framework',
-        'image': 'images/ecck.jpg'
+        'image': ['images/ecck.jpg']
     }, {
         'title': 'Meg-n-Boots',
         'dates': 'Jan 2016',
         'description': 'Custom theme built on _s',
-        'image': 'images/megnboots.jpg'
+        'image': ['images/megnboots.jpg']
     }],
     display: function() {
         for (project in projects.projects) {
@@ -150,7 +150,7 @@ education = {
         'name': 'North Park University',
         'location': 'Chicago, IL',
         'degree': 'MBA, MDiv',
-        'majors': 'Finance, International Business',
+        'majors': ['Finance, International Business'],
         'dates': '2009 - 2012',
         'url': 'http://northpark.edu'
 
@@ -158,14 +158,14 @@ education = {
         'name': 'University of Barcelona',
         'location': 'Barcelona, Spain',
         'degree': 'MA',
-        'majors': 'Citizenship and Human Rights: Ethics and Politics',
+        'majors': ['Citizenship and Human Rights: Ethics and Politics'],
         'dates': '2008-2009',
         'url': 'http://ub.edu'
     }, {
         'name': 'Arabic Language Institute of Fez',
         'location': 'Fes, Morocco',
         'degree': 'Certificate',
-        'majors': 'Beginner Arabic',
+        'majors': ['Beginner Arabic'],
         'dates': '2009',
         'url': 'http://www.alif-fes.com/'
     }],
