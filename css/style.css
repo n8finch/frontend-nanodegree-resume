@@ -102,9 +102,18 @@ a {
     line-height: 28px;
 }
 
+#skills {
+    width: 150px;
+    display: inline-block;
+}
+
 #skills-h3 {
     color: #f5ae23;
     display: none;
+}
+
+svg {
+    float: right;
 }
 
 .orange {
@@ -249,4 +258,14 @@ span {
 
 google-map {
   height: 300px;
+}
+
+
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.arc path {
+  stroke: #fff;
 }

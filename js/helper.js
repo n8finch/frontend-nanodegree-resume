@@ -29,7 +29,7 @@ var HTMLwelcomeMsg = '<div class="flex-header"><h3 id="about-me" class="orange-t
 
 var HTMLwelcomeDiv = '<div id="welcome-skills" class="flex-box"></div>';
 
-var HTMLskillsStart = '<div class="flex-header"><h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class=""></ul></div>';
+var HTMLskillsStart = '<div class="flex-header" id="skills-flex"><h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class=""></ul></div>';
 var HTMLskills = '<li class=""><span class="white-text">- %data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
