@@ -3,6 +3,7 @@ var bio, work, projects, education = {};
 bio = {
   'name': 'Nate Finch',
   'role': 'Front End Web Developer',
+  'born': 'Houston, Texas',
   'contacts': {
     'mobile': '010-9581-1205',
     'email': 'n8finch@gmail.com',
@@ -70,6 +71,14 @@ work = {
     'location': 'Seoul, South Korea',
     'dates': '2012-2014',
     'description': 'Importing products, blog and e-commerce management, customer service, swiss army knife'
+
+  }, {
+    'employer': 'Fundació Ibn Batuta',
+    'url': 'http://www.fundacionibnbattuta.org/en/',
+    'title': 'intern',
+    'location': 'Barcelona, Spain',
+    'dates': '2009',
+    'description': 'grant writing and brochure design.'
 
   }],
 
@@ -156,12 +165,25 @@ education = {
     'specifics': 'Citizenship and Human Rights: Ethics and Politics',
     'dates': '2008-2009',
     'url': 'http://ub.edu'
+  }, {
+    'name': 'Arabic Language Institute of Fez',
+    'location': 'Fes, Morocco',
+    'degree': 'Certificate',
+    'specifics': 'Beginner Arabic',
+    'dates': '2009',
+    'url': 'http://www.alif-fes.com/'
   }],
   'onlineCourses': {
-    title: 'Front End Developer Course',
-    school: 'Udacity',
-    date: 2016,
-    url: 'http://udacity.com'
+    'title': 'Front End Developer Course',
+    'school': 'Udacity',
+    'date': '2016',
+    'url': 'http://udacity.com',
+    'classes': [
+      'JavaScript Basics',
+      'Object Oriented JavaScript',
+      'Website Optimization'
+    ]
+
   },
   display: function() {
     for (school in education.schools) {
@@ -184,8 +206,22 @@ education = {
       $('.education-entry:last').append(formattedSchoolSpecifics);
     }
 
+    $('#education').append(HTMLonlineStart);
+    $('.online-entry').append('<br/>' + HTMLonlineClasses);
 
-    $('#education').append('<br/>' + HTMLonlineClasses);
+    var formattedonlineSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses.school);
+    $('.online-entry:last').append(formattedonlineSchool);
+
+    var formattedonlineDates = HTMLonlineDates.replace('%data%', education.onlineCourses.date);
+    $('.online-entry:last').append(formattedonlineDates);
+
+    var formattedOnlinelTitle = HTMLonlineTitle.replace('%data%', education.onlineCourses.title);
+    formattedOnlinelTitle = formattedOnlinelTitle.replace('%url%', education.onlineCourses.url);
+    $('.online-entry:last').append(formattedOnlinelTitle);
+
+
+
+
 
   }
 }
@@ -233,5 +269,5 @@ bio.display();
 work.display();
 projects.display();
 education.display();
-$('#main').append(internationalizeButton);
+// $('#main').append(internationalizeButton);
 $('#mapDiv').append(googleMap);

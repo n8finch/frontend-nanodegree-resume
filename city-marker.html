@@ -1,0 +1,43 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+
+<dom-module id="city-marker">
+
+  <style>
+
+
+  </style>
+
+  <template>
+    <ul>
+      <template is="dom-repeat" items="{{contacts}}">
+          <li>
+            <h3>{{item.city}}</h3>
+            <span>{{item.memo}}</span>
+          </li>
+      </template>
+    </ul>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'city-marker',
+
+    ready: function() {
+      this.contacts = [
+        {
+          city: 'Oakland, California',
+          memo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        },{
+          city: 'Chicago, Illinois',
+          memo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        },{
+          city: 'Houston, Texas',
+          memo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        },
+      ]
+      console.log('this: ' + this.contacts[0].city);
+    }
+  });
+</script>

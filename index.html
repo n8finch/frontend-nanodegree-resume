@@ -41,6 +41,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Google Map to your resume!
   -->
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="bower_components/google-map/google-map.html">
+    <link rel="import" href="contact-list.html">
+    <link rel="import" href="city-marker.html">
     <meta name="viewport" content="width=device-width">
 </head>
 
@@ -75,6 +79,15 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
             <ul id="footerContacts" class="flex-box">
             </ul>
         </div>
+
+        <div class="google-map-polymer">
+          <google-map latitude="37.77493" longitude="-122.41942" fit-to-markers>
+            <google-map-marker latitude="37.77493" longitude="-122.41942">
+            </google-map-marker>
+          </google-map>
+        </div>
+        <contact-list></contact-list>
+        <city-marker></city-marker>
     </div>
     <!--
   The next line tells the browser where to download the JavaScript file you'll be

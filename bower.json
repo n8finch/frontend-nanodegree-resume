@@ -1,0 +1,23 @@
+{
+  "name": "frontend-nanodegree-resume",
+  "homepage": "https://github.com/n8finch/frontend-nanodegree-resume",
+  "authors": [
+    "Nate Finch <finchproservices@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "google-map": "GoogleWebComponents/google-map#^1.1.10"
+  }
+}

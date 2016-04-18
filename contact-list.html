@@ -1,0 +1,46 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+
+<dom-module id="contact-list">
+
+  <style>
+
+
+  </style>
+
+  <template>
+    <ul>
+      <template is="dom-repeat" items="{{contacts}}">
+          <li>
+            <img src="{{item.img}}">
+            <h3>{{item.name}}</h3>
+            <span>{{item.email}}</span>
+          </li>
+      </template>
+    </ul>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'contact-list',
+
+    ready: function() {
+      this.contacts = [
+        {
+          name: 'Nate',
+          email: 'me@email.com',
+          img: 'http://placehold.it/300x200'
+        },{
+          name: 'Tom',
+          email: 'me@email.com',
+          img: 'http://placehold.it/200x300'
+        },{
+          name: 'Same',
+          email: 'me@email.com',
+          img: 'http://placehold.it/300x300'
+        },
+      ]
+    }
+  });
+</script>

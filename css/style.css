@@ -19,6 +19,7 @@ h6 {
 }
 
 .education-entry,
+.online-entry,
 .work-entry,
 .project-entry {
     padding: 0 5%;
@@ -126,7 +127,7 @@ a {
 }
 
 .dark-gray {
-    background-color: #4a4a4a;
+    background-color: #3E7292;
 }
 
 
@@ -137,11 +138,11 @@ a {
 #projects,
 #education,
 #mapDiv {
-    padding-top: 20px;
+    padding: 20px;
 }
 
 #header {
-    background-color: #484848;
+    background-color: #3E7292;
 }
 
 #projectList {
@@ -196,6 +197,10 @@ span {
     text-align: center;
 }
 
+#lets-connect > h2 {
+    color: #3E7292;
+}
+
 
 /* Media queries to handle various device widths */
 
@@ -240,4 +245,8 @@ span {
     .biopic {
         display: block;
     }
+}
+
+google-map {
+  height: 300px;
 }

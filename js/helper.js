@@ -52,9 +52,10 @@ var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Concentration: %data%</em>';
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
-var HTMLonlineSchool = ' - %data%</a>';
+var HTMLonlineStart = '<div class="online-entry"></div>';
+var HTMLonlineClasses = '<h4>Online Classes</h4>';
+var HTMLonlineSchool = '<a href="%url%" target="_blank">%data%</a>';
+var HTMLonlineTitle = '<br/><b>%data%</b>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
@@ -128,6 +129,7 @@ function initializeMap() {
 
     // adds the single location property from bio to the locations array
     locations.push(bio.contacts.location);
+    locations.push(bio.born);
 
     // iterates through school locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
@@ -145,8 +147,11 @@ function initializeMap() {
       locations.push(job.location);
     });
 
+    // console.log(locations);
     return locations;
   }
+
+
 
   /*
   createMapMarker(placeData) reads Google Places search results to create map pins.
@@ -154,7 +159,7 @@ function initializeMap() {
   about a single location.
   */
   function createMapMarker(placeData) {
-
+    console.log(placeData);
     // The next lines save location data from the search result object to local variables
     var lat = placeData.geometry.location.lat(); // latitude from the place service
     var lon = placeData.geometry.location.lng(); // longitude from the place service
@@ -177,7 +182,7 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+      infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
@@ -196,6 +201,7 @@ function initializeMap() {
   function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
       createMapMarker(results[0]);
+      // console.log(results[0]);
     }
   }
 
