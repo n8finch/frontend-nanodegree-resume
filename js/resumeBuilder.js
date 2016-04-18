@@ -3,7 +3,6 @@ var bio, work, projects, education = {};
 bio = {
     'name': 'Nate Finch',
     'role': 'Front End Web Developer',
-    'born': 'Houston, Texas',
     'contacts': {
         'mobile': '010-9581-1205',
         'email': 'n8finch@gmail.com',
@@ -59,14 +58,12 @@ bio = {
 work = {
     'jobs': [{
         'employer': 'Self/Freelancer',
-        'url': 'http://finchproservices.com',
         'title': 'WordPress Developer',
         'location': 'Seoul, South Korea',
         'dates': '2014-present',
         'description': 'WordPress website development, Genesis Framework, e-commerce, membership, government, business and personal websites.'
     }, {
         'employer': 'The Arrival Store',
-        'url': 'http://thearrivalstore.com',
         'title': 'Business Developer',
         'location': 'Seoul, South Korea',
         'dates': '2012-2014',
@@ -74,7 +71,6 @@ work = {
 
     }, {
         'employer': 'Fundació Ibn Batuta',
-        'url': 'http://www.fundacionibnbattuta.org/en/',
         'title': 'intern',
         'location': 'Barcelona, Spain',
         'dates': '2009',
@@ -154,7 +150,7 @@ education = {
         'name': 'North Park University',
         'location': 'Chicago, IL',
         'degree': 'MBA, MDiv',
-        'specifics': 'Finance, International Business',
+        'majors': 'Finance, International Business',
         'dates': '2009 - 2012',
         'url': 'http://northpark.edu'
 
@@ -162,14 +158,14 @@ education = {
         'name': 'University of Barcelona',
         'location': 'Barcelona, Spain',
         'degree': 'MA',
-        'specifics': 'Citizenship and Human Rights: Ethics and Politics',
+        'majors': 'Citizenship and Human Rights: Ethics and Politics',
         'dates': '2008-2009',
         'url': 'http://ub.edu'
     }, {
         'name': 'Arabic Language Institute of Fez',
         'location': 'Fes, Morocco',
         'degree': 'Certificate',
-        'specifics': 'Beginner Arabic',
+        'majors': 'Beginner Arabic',
         'dates': '2009',
         'url': 'http://www.alif-fes.com/'
     }],
@@ -202,7 +198,7 @@ education = {
             var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools[school].degree);
             $('.education-entry:last').append(formattedSchoolDegree);
 
-            var formattedSchoolSpecifics = HTMLschoolMajor.replace('%data%', education.schools[school].specifics);
+            var formattedSchoolSpecifics = HTMLschoolMajor.replace('%data%', education.schools[school].majors);
             $('.education-entry:last').append(formattedSchoolSpecifics);
         }
 
